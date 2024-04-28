@@ -1,0 +1,179 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Base styles for cards, buttons, and select elements */
+.card, button, select {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions for theme change */
+}
+
+/* Styles for the select element */
+select {
+  padding: 8px 16px;
+  background: #eee; /* Neutral background that works on most themes */
+  color: inherit; /* Inherit color from parent for adaptability */
+  outline: none;
+}
+
+select:hover {
+  background: #ddd;
+}
+
+
+/* Theme Variables */
+:root {
+  --light-background: #fff;
+  --light-text: #333;
+  --dark-background: #333;
+  --dark-text: #fff;
+  --solarized-background: #fdf6e3;
+  --solarized-text: #657b83;
+  --monokai-background: #272822;
+  --monokai-text: #f8f8f2;
+  --dracula-background: #282a36;
+  --dracula-text: #bd93f0;
+  --dracula-accent: #bd93f9;
+  --cobalt-background: #193549;
+  --cobalt-text: #ffc600;
+  --nightOwl-background: #011627;
+  --nightOwl-text: #d6deeb;
+}
+
+/* Light theme styles */
+.App.light {
+  background-color: var(--light-background);
+  color: var(--light-text);
+}
+
+.App.light .card {
+  background-color: var(--light-background);
+  color: var(--light-text);
+}
+
+/* Dark theme styles */
+.App.dark {
+  background-color: var(--dark-background);
+  color: var(--dark-text);
+}
+
+.App.dark .card,
+.App.dark select {
+  background-color: var(--dark-background);
+  color: var(--dark-text);
+}
+
+/* Solarized theme styles */
+.App.solarized {
+  background-color: var(--solarized-background);
+  color: var(--solarized-text);
+}
+
+.App.solarized .card,
+.App.solarized select {
+  background-color: var(--solarized-background);
+  color: var(--solarized-text);
+}
+
+/* Monokai theme styles */
+.App.monokai {
+  background-color: var(--monokai-background);
+  color: var(--monokai-text);
+}
+
+.App.monokai .card,
+.App.monokai select {
+  background-color: var(--monokai-background);
+  color: var(--monokai-text);
+}
+
+/* Dracula theme styles */
+.App.dracula {
+  background-color: var(--dracula-background);
+  color: var(--dracula-text);
+}
+
+.App.dracula .card,
+.App.dracula select {
+  background-color: var(--dracula-background);
+  color: var(--dracula-text);
+}
+
+/* Cobalt theme styles */
+.App.cobalt {
+  background-color: var(--cobalt-background);
+  color: var(--cobalt-text);
+}
+
+.App.cobalt .card,
+.App.cobalt select {
+  background-color: var(--cobalt-background);
+  color: var(--cobalt-text);
+}
+
+/* Night Owl theme styles */
+.App.nightOwl {
+  background-color: var(--nightOwl-background);
+  color: var(--nightOwl-text);
+}
+
+.App.nightOwl .card,
+.App.nightOwl select {
+  background-color: var(--nightOwl-background);
+  color: var(--nightOwl-text);
+}
+
+/* Delete button styles */
+.delete-btn {
+  padding: 5px 10px;
+  background-color: #ff5555;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px; /* Add some space between content and the button */
+}
+
+.delete-btn:hover {
+  background-color: #ff4444;
+}

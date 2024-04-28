@@ -1,0 +1,112 @@
+#+TITLE: Fluent React Notes
+
+* 1. The Entry-Level Stuff
+
+** MVC Architecture
+
+*** Model
+The Model is responsible for the data and the business rules of the
+application. The Model is unaware of the View and Controller, ensuring
+that the business logic is isolated from the user interface.
+
+*** View
+The View represents the user interface of the application. It displays
+data from the Model to the user and sends user commands to the
+Controller. The View is passive, meaning it waits for the Model to
+provide data to display and does not fetch or save data directly. The
+View also does not handle user interaction on its own, but delegates
+this responsibility to the next component: the Controller.
+
+*** Controller
+The Controller acts as an interface between the Model and the View. It
+takes the user input from the View, processes it (with potential
+updates to the Model), and returns the output display to the View. The
+Controller decouples the Model from the View, making the system
+architecture more flexible.
+
+** MVC Architecture Short-comings
+
+*** Complex Interactivity and State Management
+
+Often struggles when it comes to managing complex UIs with many
+interactive elements.
+
+React made this easier to reason about by positing that UI components
+are like a function: they receive input (props) and return output
+based on those inputs (elements).
+
+*** Two-way data binding
+
+In essence, two-way data binding is like having a live connection
+between your form and your data. Whatever happens in one immediately
+affects the other. Some MVC frameworks utilize this, which can lead to
+unintended side-effects if not managed carefully. In some cases, the
+view becomes out of sync with the model or vice versa.
+
+*** Tight Coupling
+
+In some MVC implementations, the Model, View, and Controller can
+become tightly coupled.
+
+** React's Value Proposition
+
+*** Declarative Code
+
+React provides a declarative abstraction on the DOM.
+
+*** The Virtual DOM
+
+The real DOMis represented as a JS object. It allows developers to
+update the UI without directly manipulating the actual DOM. This is
+faster than updating the entire DOM tree every time there is a change.
+
+In React, the vDOM is a lightweight representation of the actual DOM
+tree. It is a plain JS object. React creates and updates the vDOM to
+match the actual DOM tree, and any changes made to the vDOM are
+applied to the actual DOM using a process called reconciliation
+
+*** The Component Model
+
+React encourages "thinking in components", that is, breaking our app
+into smaller pieces by adding them to a larger tree to compose our
+app.
+
+*** Immutable State
+
+The state of our app is described as a set of immutable values.
+
+*** Unidirectional Data Flow
+
+Way easier to handle that errant pockets of 2-way data flow between
+tightly coupled models and views.
+
+* 2. JSX
+
+JSX becomes vanilla JS before it makes it to the browser.
+
+Some discussion about jsx, html, compilation / transpilation
+
+* 3. The Virtual DOM
+
+As apps grow bigger, it becomes harder to manage the "real
+DOM". React's virtual DOM provides a solution to this problem.
+
+** Intro to the vDOM
+
+The vDOM is an HTML document modeled as a js object, just like the
+DOM. The vDOM is a lightweight copy of the DOM. The key difference is
+that while the real DOM is made up of Node objects, the vDOM is made
+up of plain JS objects that act as descriptions.
+
+In react, whenever we make a change to the UI via setState or some
+other mechaism, the vDOM is updated first, then the real DIM is
+updated to match the changes in the vDOM. The reason for updating the
+vDOM first is that changes in the real DOM can be somewhat slow and
+expensive.
+
+** The Real DOM
+
+When an HTML page is loaded into a browser, it is parsed into a tree
+of nodes and objects, an object model, which is the DOM. It is a live
+representation of the web page, and is constantly updated as users
+interact with the page.
