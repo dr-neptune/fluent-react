@@ -110,3 +110,21 @@ When an HTML page is loaded into a browser, it is parsed into a tree
 of nodes and objects, an object model, which is the DOM. It is a live
 representation of the web page, and is constantly updated as users
 interact with the page.
+
+* 4. Inside Reconciliation
+
+In this chapter, we explore how react builds its virtual DOM and then
+updates the real DOM through a process called reconciliation.
+
+*yawn*
+
+This could have been a =s=ection= inst=ea=d =of== =a =cha=pt=er
+
+In this chapter, we explored the concept of React reconciliation and
+learned about the Fiber reconciler. We also learned about Fibers,
+which enable efficient and interruptible rendering in concert with a
+powerful scheduler. We also learned about the render phase and the
+commit phase, which are the two main phases of the reconciliation
+process. Finally, we learned about the FiberRootNode: a key data
+structure responsible for managing the commit phase of the
+reconciliation process.
